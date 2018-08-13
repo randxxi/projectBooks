@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+	--main-style-color: #71abf7;
+	--main-shadow-color: rgba(0,0,0,0.4);
+	--header-back-color: #d7dbe0;
+	--main-title-color: #fff;
+	--input-border-color: #edeeef;
+	--button-border-color: #539cfc;
+}
+
+h1,h2,h3 {
+	color: var(--main-title-color);
+}

@@ -1,0 +1,11 @@
+<div class="container-fluid top-container">
+  <app-top-nav-app class="row"></app-top-nav-app>
+  <div class="row">
+    <section class="content-section">
+      <app-aside-left class="left-aside" [asideState]="stateAside$ | async"></app-aside-left>
+    </section>
+    <section class="main-section" [ngClass]="((stateAside$ | async) == 'close')? 'main-collape': ''">
+      <app-main-content></app-main-content>
+    </section>
+  </div>
+</div>

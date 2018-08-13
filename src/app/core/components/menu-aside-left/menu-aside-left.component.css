@@ -1,0 +1,9 @@
+:host-context(.aside-close) span {
+	display: none;
+}
+
+
+.nav-item{
+	padding: 10px;
+	border-bottom: 1px solid black;
+}

@@ -1,0 +1,18 @@
+.user-image > img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50px;
+}
+
+.user-info {
+	padding: 5px 10px;
+}
+
+:host-context(.aside-close) .user-info {
+	display: none;
+}
+
+:host-context(.aside-close) .user-image > img {
+	width: 30px;
+	height: 30px;
+}

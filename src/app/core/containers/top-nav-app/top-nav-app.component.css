@@ -1,0 +1,63 @@
+div.top-container {
+	padding: 0;
+	margin: 0;
+}
+
+header.top-header {
+	height: 50px;
+	background-color: var(--main-style-color);
+	position: relative;
+	z-index: 500;
+}
+
+header.top-header h1 {
+	display: inline;
+	font-size: 1.4em;
+}
+
+header.top-header .left-header .toggle-sidebar {
+	color: var(--main-title-color);
+	height: 50px;
+	padding: 15px 15px;
+	display: inline-block;
+}
+
+header.top-header .left-header .toggle-sidebar:hover {
+	background-color: rgba(0,0,0,.5);
+}
+
+header.top-header .left-header .toggle-sidebar > i {
+	display: inline-block;
+}
+
+header.top-header .right-header {
+	height: 50px;
+}
+
+header.top-header .right-header .top-form {
+	height: inherit;
+}
+
+header.top-header .right-header a.link-profile {
+	padding: 15px;
+	font-size: 1.6em;
+}
+
+.bgImage {
+	background-image: url("../../../../assets/libros.jpg");
+	background-size: contain;
+}
+
+.left-header{
+    background-color: rgba(80, 70, 70, 0.5);
+}
+
+.top-form{
+    background-color: rgba(248, 238, 238, 0.5);
+} 
+
+.user-image > img {
+	width: 20px;
+	height: 20px;
+	border-radius: 50px;
+}

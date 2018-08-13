@@ -1,0 +1,8 @@
+<aside class="left-aside" [@asideCollapse]="asideState" [ngClass]="(asideState == 'close')? 'aside-close': ''">
+  <div class="header-aside">
+    <app-top-aside-left [user]="user"></app-top-aside-left>
+  </div>
+  <div class="content-aside">
+    <app-menu-aside-left></app-menu-aside-left>
+  </div>
+</aside>

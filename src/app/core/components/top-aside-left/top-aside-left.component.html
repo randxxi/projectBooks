@@ -1,0 +1,8 @@
+<div class="user-image">
+  <img [src]="user?.photoURL">
+</div>
+<div class="user-info">
+  <h3>{{user?.displayName}}</h3>
+  <h4>{{user?.email}}</h4>
+  <span>{{today | date:"EEEE, MMMM d, y" | uppercase}}</span>
+</div>

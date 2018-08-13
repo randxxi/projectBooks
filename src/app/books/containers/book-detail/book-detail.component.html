@@ -1,0 +1,10 @@
+<div class="book">
+  <app-book-info [book]="book" (pushFavorite)="addFavorite($event)"></app-book-info>
+</div>
+
+
+<div id="similares">
+<h2>Libros similares</h2>
+</div>
+<app-books-main [book]="book"></app-books-main>
+{{book.id}}
