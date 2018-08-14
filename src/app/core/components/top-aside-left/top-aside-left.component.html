@@ -1,8 +1,10 @@
 <div class="user-image">
-  <img [src]="user?.photoURL">
+  <img *ngIf="user?.photoURL" [src]="user?.photoURL">
+  <img *ngIf="!user?.photoURL" src="assets/img/default-user.png">
+  
 </div>
 <div class="user-info">
   <h3>{{user?.displayName}}</h3>
-  <h4>{{user?.email}}</h4>
+  <h5>{{user?.email}}</h5>
   <span>{{today | date:"EEEE, MMMM d, y" | uppercase}}</span>
 </div>
