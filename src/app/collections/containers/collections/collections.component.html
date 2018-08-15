@@ -1,3 +1,24 @@
-<p>
-  collections works!
-</p>
+<button mat-raised-button color="warn" (click)="showCollectionCard()">Crear</button>
+<br/>
+<app-card-collection *ngIf="isEnabledCollectionCard"></app-card-collection>
+<br/>
+<div *ngFor="let collection of collectionList">
+  <mat-card>
+    <mat-toolbar color="primary">
+      <span>{{collection.name}}</span>
+    </mat-toolbar>
+    <mat-card-content>
+      <p>
+          {{collection.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="enterCollection(collection)">Entrar</button>
+      <button mat-raised-button color="accent" (click)="removeCollection(collection.$key)">Eliminar</button>
+    </mat-card-actions>
+  </mat-card>
+  <br/>
+</div>
+
+<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+<br/>
