@@ -1,36 +1,36 @@
 <br/>
-<mat-card>
-  <mat-toolbar color="primary">
-    <span>Crear Coleccion</span>
-  </mat-toolbar>
+
+
+    <span>Crear Colección</span>
+
   <form #collectionForm="ngForm">
-    <mat-card-content>
+
       <table cellspacing="0">
         <tr>
           <td>
-            <mat-form-field>
-              <input type="name" placeholder="Name" [(ngModel)]="collection.name" name="name" #name="ngModel" required matInput>
+     
+              <h4>Nombre</h4>
+              <input type="name"  [(ngModel)]="collection.name" name="name" #name="ngModel" required  style="background-color: lightgray">
               <div [hidden]="name.valid || name.pristine" role="alert">
-                Invalid name
+                
               </div>
-            </mat-form-field>
+  
           </td>
         </tr>
         <tr>
           <td>
-            <mat-form-field>
-              <textarea placeholder="Description" [(ngModel)]="collection.description" name="description" #description="ngModel" required matInput></textarea>
+    
+              <h4>Descripción</h4>
+              <input type="name"  [(ngModel)]="collection.description" name="description" #description="ngModel" required style="background-color: lightgray"> 
               <div [hidden]="description.valid || description.pristine" role="alert">
-                Invalid description
+                
               </div>
-            </mat-form-field>
+   
           </td>
         </tr>
       </table>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="addCollection()" [disabled]="!collectionForm.form.valid">Crear</button>
-      <button mat-raised-button color="accent" type="reset">Cancelar</button>
-    </mat-card-actions>
+
+      <button class="col-12 col-md-auto col-lg-auto btn btn-primary"  (click)="addCollection()" [disabled]="!collectionForm.form.valid">Crear</button>
+      <button class="col-12 col-md-auto col-lg-auto btn btn-primary"  type="reset">Cancelar</button>
+
   </form>
-</mat-card>

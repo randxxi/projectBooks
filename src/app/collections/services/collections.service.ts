@@ -19,17 +19,18 @@ export class CollectionsService {
       .subscribe(
         user => {
           this.user = user;
+
           this.collectionsRef = rdb.list('collections/' + this.user.uid);
         }
       );
   }
 
   addCollection(collection: any) {
+    console.log(this.user.uid+" <<<<<<<<<<<<----------------");
     this.collectionsRef.push(collection).then(_ => this.alertService.message("Agregado a Colecciones", "success"));
   }
 
   removeCollection($key: string) {
-    debugger
     this.collectionsRef.remove($key)
   }
 }

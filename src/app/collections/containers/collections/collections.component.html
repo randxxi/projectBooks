@@ -1,4 +1,4 @@
-<button mat-raised-button color="warn" (click)="showCollectionCard()">Crear</button>
+<button class="col-12 col-md-auto col-lg-auto btn btn-primary"  (click)="showCollectionCard()">Crear Nueva Colección</button>
 <br/>
 <app-card-collection *ngIf="isEnabledCollectionCard"></app-card-collection>
 <br/>
@@ -13,8 +13,8 @@
       </p>
     </mat-card-content>
     <mat-card-actions align="end">
-      <button mat-raised-button color="primary" (click)="enterCollection(collection)">Entrar</button>
-      <button mat-raised-button color="accent" (click)="removeCollection(collection.$key)">Eliminar</button>
+      <button class="col-12 col-md-auto col-lg-auto btn btn-primary"   (click)="enterCollection(collection)">Entrar</button>
+      <button class="col-12 col-md-auto col-lg-auto btn btn-primary"  (click)="removeCollection(collection.$key)">Eliminar</button>
     </mat-card-actions>
   </mat-card>
   <br/>
