@@ -1,19 +1,29 @@
-<div id="div">
+<div class="form-container">
+  <img src="assets/images/lock.svg" id="lock">
+
+    <span class="error" *ngIf="error">{{ error }}</span>
+    <app-login-form (submitted)="login($event)" (signByGoogle)="signGoogle($event)" (signFacebook)="signFacebook($event)"></app-login-form>
+
+  <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+</div>
+
+
+<!--div id="div">
 <div class="login-box">
   <div class="login-logo">
     <a href="">
       <b>Bzg Books</b>APP</a>
   </div>
-  <!-- /.login-logo -->
+  
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <app-login-form (submitted)="login($event)" (signByGoogle)="signGoogle($event)"></app-login-form>
+    <app-login-form (submitted)="login($event)" (signByGoogle)="signGoogle($event)" (signFacebook)="signFacebook($event)"></app-login-form>
 
   </div>
-  <!-- /.login-box-body -->
+  
 </div>
-<!-- /.login-box -->
-</div>
+
+</div-->
 
 

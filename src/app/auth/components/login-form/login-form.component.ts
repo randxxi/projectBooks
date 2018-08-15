@@ -10,7 +10,10 @@ export class LoginFormComponent implements OnInit {
 
   @Output() submitted = new EventEmitter<IAuth>();
   @Output() signByGoogle = new EventEmitter<boolean>();
+  @Output() signByFacebook = new EventEmitter<boolean>();
+
   login : IAuth;
+
 
   constructor() {
     this.login = new Auth();
@@ -25,6 +28,10 @@ export class LoginFormComponent implements OnInit {
 
   signGoogle() {
     this.signByGoogle.emit(true);
+  }
+
+  signFacebook() {
+    this.signByFacebook.emit(true);
   }
 
 }

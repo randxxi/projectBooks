@@ -1,11 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-    background:#E2E4E6;
-    padding-top:4em;
-}
-
 .form-container {
-    background:white;
+    background:rgb(225, 238, 225);
     padding:3.5em;
     width:500px;
     position:fixed;
@@ -35,6 +30,7 @@ input.txt {
 
 h2 {
     margin: 1.7em 0 .9em 0;
+    color: black;
 }
 
 .alc {
