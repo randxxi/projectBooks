@@ -18,10 +18,13 @@ import { routes } from "./routes";
 import { environment } from "../environments/environment";
 import { AppComponent } from './app.component';
 import { reducers, metaReducer } from './reducer/reducer';
+import { MaterialModule } from './material.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent  
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { reducers, metaReducer } from './reducer/reducer';
     RouterModule.forRoot(routes),
     CoreModule,
     HttpModule,
+    MaterialModule,
     HttpClientModule,
     /**HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false, delay: 3000 }
