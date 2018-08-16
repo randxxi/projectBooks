@@ -1,12 +1,17 @@
 import { Routes } from "@angular/router";
-import { CollectionsComponent } from "./containers/collections/collections.component";
+import { CollectionListComponent } from "./containers/collection-list/collection-list.component";
+import { CollectionBooksComponent } from "./components/collection-books/collection-books.component";
 
 export const routes: Routes = [
     {
         path: 'list',
-        component: CollectionsComponent
+        component: CollectionListComponent
     },
     {
-        path: '**', redirectTo: 'list', pathMatch: 'full'
+        path: 'collectionBooks/:id',
+        component: CollectionBooksComponent
+    },
+    {
+        path: '', redirectTo: 'list', pathMatch: 'full'
     }
 ];

@@ -1,13 +1,13 @@
 export interface ICollection {
-    $key: string;
-    name: string,
-    description: string
-}
-
-export class Collection implements ICollection {
-    $key: string;
     name: string;
     description: string;
+    books: any[]
+}
 
-    constructor() { }
+export class Collection implements ICollection{
+    name: string;
+    description: string;
+    books: any[] = [];
+
+    constructor(){}
 }

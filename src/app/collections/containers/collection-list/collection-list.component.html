@@ -1,0 +1,18 @@
+<div>
+    <div class="collectionView">
+        <div class id="collection_addition">
+            <app-collection-form (submitted)="newCollection($event)"></app-collection-form>
+        </div>
+        <div class="list-group" id="collection_list">  
+                <div class="list-group-title">Mis colecciones</div> 
+            <div class="list-group-item collection-item" *ngFor="let collection of listCollections | async">
+            <div class="card-header">{{collection.name}}</div>
+            <div class="card-body">{{collection.description}}</div>
+            <div class="col-xs-4">
+                    <a class="col-12 col-md-auto col-lg-auto btn btn-primary mybtn" [routerLink]="['../collectionBooks/', collection.key]">Entrar</a>
+                    <div class="col-12 col-md-auto col-lg-auto btn btn-primary mybtn" (click)="removeCollection(collection.name, collection.key)">Eliminar colección</div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

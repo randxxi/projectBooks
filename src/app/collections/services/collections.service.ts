@@ -1,36 +1,63 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../../environments/environment';
 import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
 import { MessagesService } from '../../alerts/services/messages.service';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { Collection } from '../models/collection';
+import { User } from '../../auth/models/user';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class CollectionsService {
+export class CollectionService {
 
-  url = environment.apiBooks;
-  collectionsRef: AngularFireList<any>;
   user: firebase.User;
 
+  favsRef: AngularFireList<any> = null;  
+  favsRef1: AngularFireList<any> = null;
+
   constructor(private alertService: MessagesService, private authFire: AngularFireAuth,
-    rdb: AngularFireDatabase) {
-      authFire.authState
-      .subscribe(
+    private rdb: AngularFireDatabase) { 
+      authFire.authState.subscribe(
         user => {
           this.user = user;
-
-          this.collectionsRef = rdb.list('collections/' + this.user.uid);
+          this.favsRef = rdb.list('collections/' + this.user.uid);
         }
-      );
+      )
+    }
+
+  newCollection(collection:Collection){
+
+
+      const promise = this.favsRef.push(collection);
+      promise.then(() => {
+        this.alertService.message("Collection creada", "success");
+      });
+    }
+
+  getListCollections(): AngularFireList<any[]>{
+    return this.favsRef;
   }
 
-  addCollection(collection: any) {
-    console.log(this.user.uid+" <<<<<<<<<<<<----------------");
-    this.collectionsRef.push(collection).then(_ => this.alertService.message("Agregado a Colecciones", "success"));
+  getBooksInCollection(key:string): AngularFireList<any[]>{
+    this.favsRef1 = this.rdb.list<any[]>('collections/' + this.user.uid + "/" + key + "/books");
+    return this.favsRef1;
   }
 
-  removeCollection($key: string) {
-    this.collectionsRef.remove($key)
+  removeCollection(key: string){
+    this.rdb.list<any[]>('collections/' + this.user.uid + "/" + key).remove()
+  }
+
+  removeBookFromCollection(key:string, bookId:string){
+    this.rdb.list<any[]>('collections/' + this.user.uid + "/" + key + "/books/" + bookId).remove();
+  }
+
+  addBook(key:string, book: any){
+    let favsRef1 = this.rdb.list('collections/' + this.user.uid + "/" + key + "/books");
+    const promise = favsRef1.push(book);
+    promise.then(() => {
+      this.alertService.message("libro adicionado a la coleccion","success");
+    });
+
   }
 }
