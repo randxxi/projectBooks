@@ -20,15 +20,21 @@
       </div>
     </div>
     <br>
-    <div class="row">
+    <div class="row col-lg-8">
       <div class="col-6">
         <button class="btn btn-primary" (click)="addFavorite()">
           <i class="fa fa-heart"></i> Favorito</button>
       </div>
       <div class="col-6">
-          <button class="btn btn-primary" (click)="addToCollection()">
-            <i class="fa fa-heart"></i> Agregar a Colleccion</button>
+          <button class="btn btn-primary" (click)="onNavImageClick();">
+            <i class="fa fa-list-ul"></i> Agregar a Colleccion</button>
+            <div class="user-window panel"  [@popupAnimation]="popupState" [ngClass]="((popupState == 'closed') ? 'user-window-hidden': '')" (click)="onNavImageClick();">
+              <div style="align-self: center;">
+                 hola
+              </div>
+            </div>  
         </div>
+        
 
     </div>
   </div>
