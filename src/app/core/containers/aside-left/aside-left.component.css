@@ -1,0 +1,44 @@
+aside.left-aside {
+	width: 300px;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: 50px;
+	box-shadow: 1px 0 2px var(--main-shadow-color);
+}
+
+aside.left-aside.aside-close {
+	display: block !important;
+	width: 50px;
+}
+
+aside.left-aside.aside-close span {
+	display: none;
+}
+
+aside.left-aside.aside-close .user-info {
+	display: none;
+}
+
+aside.left-aside.aside-close .user-image > img {
+	width: 30px;
+	height: 30px;
+}
+
+aside.left-aside h1,
+h2,
+h3 {
+	display: inline;
+}
+
+.header-aside {
+	max-height: 20%;
+	min-height: 100px;
+	background-color:  rgb(142, 167, 248);
+	padding: 16px 10px;
+}
+
+.header-aside > div {
+	float: left;
+}

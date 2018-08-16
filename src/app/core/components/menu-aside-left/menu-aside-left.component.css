@@ -7,3 +7,14 @@
 	padding: 10px;
 	border-bottom: 1px solid black;
 }
+
+.nav-item:hover{
+	background-color: rgb(158, 241, 158);
+}
+
+#Menu {
+	height: 700px;
+	background-image: url("../../../../assets/images/estante.jpg");
+	background-size: contain;
+	background-repeat: 2;
+}

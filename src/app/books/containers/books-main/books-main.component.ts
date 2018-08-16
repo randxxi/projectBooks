@@ -14,7 +14,7 @@ export class BooksMainComponent implements OnInit {
   @Input() book:any;
 
   constructor(private bookService: BooksListService) { 
-      this.bookService.searchBooks('Colombia');    
+      this.bookService.searchBooks('Tecnologia');    
   }
 
   ngOnInit() {  

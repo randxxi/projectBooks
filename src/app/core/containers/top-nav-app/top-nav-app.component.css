@@ -1,46 +1,144 @@
-div.top-container {
-	padding: 0;
-	margin: 0;
-}
+
+
+
+
 
 header.top-header {
-	height: 50px;
-	background-color: var(--main-style-color);
-	position: relative;
-	z-index: 500;
+    min-height: 50px;
+    background-color:var(--main-style-color);    
+    position: relative;    
+    z-index: 500;        
 }
 
 header.top-header h1 {
-	display: inline;
-	font-size: 1.4em;
+    display: inline;
+    font-size: 1.4em;    
 }
 
+
 header.top-header .left-header .toggle-sidebar {
-	color: var(--main-title-color);
-	height: 50px;
-	padding: 15px 15px;
-	display: inline-block;
+    color: var(--main-title-color);
+    height: 50px;
+    padding: 15px 15px;
+    display: inline-block;
 }
 
 header.top-header .left-header .toggle-sidebar:hover {
-	background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .4);
 }
 
 header.top-header .left-header .toggle-sidebar > i {
-	display: inline-block;
+    display: inline-block;
 }
 
-header.top-header .right-header {
-	height: 50px;
+
+
+header.top-header .right-header {       
+    height: 50px;
+    padding: 2px 0;   
 }
 
-header.top-header .right-header .top-form {
-	height: inherit;
+header.top-header .right-header .top-form {    
+    padding: 5px;
 }
 
-header.top-header .right-header a.link-profile {
-	padding: 15px;
-	font-size: 1.6em;
+header.top-header .right-header input.inputSearch {  
+    border-radius: 10px;  
+
+}
+
+header.top-header .right-header a.link-profile {    
+    padding: 15px;
+    font-size: 1.6em;
+}
+
+.user-window{
+    position: absolute;
+    background-color: var(--main-title-color);
+    top: 42px;
+    right: 125px;
+    border: 1px solid;
+    width: 300px;
+    border-radius: 10%;
+}
+
+.user-window-info{
+    position: absolute;
+    margin-top:15px;  
+    top: 3px;
+    left: 90px;
+}
+
+#user-window-joined{
+    font-size: 0.6em;
+    width: 150px;
+    height: 10px
+}
+
+#user-window-name{
+    font-size: 0.7em;
+}
+
+.user-window-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin: 20px;
+}
+
+.link-profile > img{
+    width: 35px;
+
+    height: 35px;
+    border-radius: 50px;
+}
+
+.user-window #user-window-top{
+
+    height:60%;
+}
+
+.user-window #user-window-bottom{
+    position: relative;
+    border-top: 0.1px solid;
+	background-color: rgb(164, 207, 247);
+	
+	height: 40%;
+	border-radius: 0% 0% 14% 14% ;
+
+
+
+}
+
+.user-window #user-window-bottom #books-count{
+    position: absolute;
+    left: 70px;
+
+
+
+}
+
+.user-window #user-window-bottom #books-text{
+    position: absolute;
+    top: 36px;
+    left: 55px;
+    font-size: 0.6em;
+
+
+}
+
+.user-window #user-window-bottom #favorites-count{
+    position: absolute;
+    right: 70px;
+
+
+}
+
+.user-window #user-window-bottom #favorites-text{
+    position: absolute;
+    top: 36px;
+    right: 45px;
+    font-size: 0.6em;
 }
 
 .bgImage {
@@ -55,9 +153,3 @@ header.top-header .right-header a.link-profile {
 .top-form{
     background-color: rgba(248, 238, 238, 0.5);
 } 
-
-.user-image > img {
-	width: 20px;
-	height: 20px;
-	border-radius: 50px;
-}

@@ -3,6 +3,7 @@
     background:rgb(225, 238, 225);
     padding:3.5em;
     width:500px;
+    height: 100%;
     position:fixed;
     left:50%;
     margin-left:-250px;

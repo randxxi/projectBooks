@@ -6,7 +6,7 @@ import { AngularFireAuth } from "angularfire2/auth";
 @Component({
   selector: 'app-aside-left',
   templateUrl: './aside-left.component.html',
-  styleUrls: ['./aside-left.component.styl'],
+  styleUrls: ['./aside-left.component.css'],
   animations: [
     trigger('asideCollapse', [
       state('close', style({
