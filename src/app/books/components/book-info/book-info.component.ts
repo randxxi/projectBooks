@@ -21,4 +21,9 @@ export class BookInfoComponent implements OnInit {
   addFavorite() {
     this.pushFavorite.emit(this.book);
   }
+  
+  addToCollection(){
+
+  }
+  
 }
