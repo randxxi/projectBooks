@@ -36,7 +36,6 @@ export class CollectionListComponent implements OnInit {
   }
 
   removeCollection(collectionName: string, collectionKey: string){
-    if(confirm("¿remover colección '" + collectionName + "'?"))
       this.collectionService.removeCollection(collectionKey);
   }
 

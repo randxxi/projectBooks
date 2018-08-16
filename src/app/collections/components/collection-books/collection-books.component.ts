@@ -40,7 +40,7 @@ export class CollectionBooksComponent implements OnInit {
   };
 
   removeBook(title: string, key: string){
-    if(confirm("¿Desea remover el libro '" + title + "' de la colección?"))
+    
       this.collectionService.removeBookFromCollection(this.id, key);
   };
 }
