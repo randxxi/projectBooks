@@ -29,7 +29,8 @@ export class CollectionService {
   newCollection(collection:Collection){
       const promise = this.favsRef.push(collection);
       promise.then(() => {
-        this.alertService.message("Colección creada", "success");
+        alert("Colección creada. ");
+        //this.alertService.message("Colección creada. ", "success");
       });
     }
 
@@ -55,7 +56,8 @@ export class CollectionService {
     let favsRef1 = this.rdb.list('collections/' + this.user.uid + "/" + key + "/books");
     const promise = favsRef1.push(book);
     promise.then(() => {
-      this.alertService.message("libro adicionado a la coleccion","success");
+      alert("Libro agregado");
+      //this.alertService.message("Libro agregado","success");
     });
 
   }

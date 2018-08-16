@@ -19,7 +19,8 @@ h1 {
         border: 0.1px solid;
         width: 200px; 
 	background-color: #007bff;
-	height: 100px !important;
+	height: 200px !important;
         border-radius: 5%;
         z-index: 999;
+        overflow: auto;
     }

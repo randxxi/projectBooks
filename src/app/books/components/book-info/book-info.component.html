@@ -30,7 +30,27 @@
             <i class="fa fa-list-ul"></i> Agregar a Colleccion</button>
             <div class="user-window panel"  [@popupAnimation]="popupState" [ngClass]="((popupState == 'closed') ? 'user-window-hidden': '')" (click)="onNavImageClick();">
               <div style="align-self: center;">
-                 Agregar a Collecion
+                 <h5 style="color:black">Agregar a Colección</h5>
+                  <div class="row">
+                    <ul class="form-group">
+                      <li *ngFor="let collection of listCollections | async">
+                          <button class="btn btn-primary" style="color: black" [value]='collection.key' (click)="addToCollection($event)">{{collection.name}}</button> 
+                          <br>
+                      </li>
+                    </ul>
+                      
+
+                  </div>
+                  
+                    
+
+<!--
+                    <select class="col-12"  (change)="addToCollection($event)">
+                     
+                        <option *ngFor="let collection of listCollections | async" [value]='collection.key'>{{collection.name}}</option>
+                    </select>
+                    -->
+                
               </div>
             </div>  
         </div>
