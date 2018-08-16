@@ -34,8 +34,18 @@ export class AuthService {
     )
   }
 
+  signInWithFacebook() {
+    return this.authFire.auth.signInWithPopup(
+      new firebase.auth.FacebookAuthProvider()
+    )
+  }
+
   login(auth: Auth) {    
     return this.authFire.auth.signInWithEmailAndPassword(auth.email, auth.password)
+  }
+
+  createWithEmail(auth: Auth) {
+    return this.authFire.auth.createUserWithEmailAndPassword(auth.email, auth.password);
   }
 
   isLoggedIn() {

@@ -1,23 +1,17 @@
-
+/* You can add global styles to this file, and also import other style files */
 .form-container {
     background:rgb(225, 238, 225);
     padding:3.5em;
     width:500px;
+    height: 100%;
     position:fixed;
     left:50%;
     margin-left:-250px;
 }
 
-
-
-#lock {
-    width:40%;
-    margin: 1.5em auto 4em auto;
-    display:block;
-}
-
 h2 {
     margin: 1.7em 0 .9em 0;
+    color: black;
 }
 
 .alc {
@@ -27,7 +21,7 @@ h2 {
 }
 
 .error {
-    background:#f1f0ef;
+    background:#f5b5a1;
     padding:1em;
     width:100%;
     display:block;
@@ -65,12 +59,4 @@ h2 {
     button {
         font-size:1em;
     }
-    #page {
-        padding:1em;
-    }
-    #toolbar {
-        width:90%;
-        margin-left: -45%;
-    }   
 }
-
