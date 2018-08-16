@@ -12,12 +12,13 @@ h1 {
 
 
 .user-window{
+        color: white;
         position: absolute;        
         top: 10px;
         left: 15px;
         border: 0.1px solid;
         width: 200px; 
-	background-color: lightblue;
+	background-color: #007bff;
 	height: 100px !important;
         border-radius: 5%;
         z-index: 999;

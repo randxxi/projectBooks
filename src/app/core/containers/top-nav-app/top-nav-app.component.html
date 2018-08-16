@@ -17,7 +17,7 @@
             <img *ngIf="user?.photoURL" [src]="user?.photoURL" (click)="onNavImageClick()">            
             <img *ngIf="!user?.photoURL" src="assets/img/default-user.png">    
 
-                <div class="user-window panel"  [@popupAnimation]="popupState" [ngClass]="((popupState == 'closed') ? 'user-window-hidden': '')">
+                <div class="user-window panel"  [@popupAnimation]="popupState" [ngClass]="((popupState == 'closed') ? 'user-window-hidden': '')" (click)="onNavImageClick()">
                           
                   <div id="user-window-top">
                     <img *ngIf="user?.photoURL" [src]="user?.photoURL" class="user-window-image">
