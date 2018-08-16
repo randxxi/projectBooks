@@ -111,4 +111,8 @@ export class TopNavAppComponent implements OnInit {
       this.state = 'close'; this.store.dispatch(new layout.CloseSideNav()); 
     }    
   }
+
+  searchText(event : string){
+    this.bookService.searchBooks(event, 0, 20);
+  }
 }

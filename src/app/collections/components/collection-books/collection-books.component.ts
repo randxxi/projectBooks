@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params } from "@angular/router";
 import {CollectionService} from '../../services/collections.service';
 import { Observable } from '../../../../../node_modules/rxjs';
@@ -16,6 +16,7 @@ import { AngularFireList } from '../../../../../node_modules/angularfire2/databa
 export class CollectionBooksComponent implements OnInit {
   books: Observable<any[]>;
   id: string;
+  @Input()  status: string;
 
   constructor(private route: ActivatedRoute, private collectionService:CollectionService, 
     private authFire: AngularFireAuth, private booksService: BooksListService) { 
