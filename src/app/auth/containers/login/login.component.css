@@ -1,6 +1,6 @@
 
 .form-container {
-    background:rgb(225, 238, 225);
+    background:rgb(255, 255, 255);
     padding:3.5em;
     width:500px;
     height: 100%;
@@ -9,10 +9,14 @@
     margin-left:-250px;
 }
 
-
+#fondo{
+    width: 2000px;
+    height: 1000px;
+    background-color: rgb(194, 194, 194);
+}
 
 #lock {
-    width:40%;
+    width:30%;
     margin: 1.5em auto 4em auto;
     display:block;
 }
@@ -35,6 +39,9 @@ h2 {
     margin-bottom:20px;
 }
 
+h3 {
+    color: black;
+}
 #goback {
     font-weight:bold;
     text-transform:uppercase;

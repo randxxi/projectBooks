@@ -1,8 +1,11 @@
+<div id="fondo">
 <div class="form-container">
+  <h3>My Books App</h3>
   <img src="/assets/images/lock.svg" id="lock">
 
   <span class="error" *ngIf="error">{{ error }}</span>
   <app-login-form (submitted)="login($event)" (signByGoogle)="signGoogle($event)" (signFacebook)="signFacebook($event)"></app-login-form>
 
   <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+</div>
 </div>

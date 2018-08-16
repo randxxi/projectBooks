@@ -1,12 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
 .form-container {
-    background:rgb(225, 238, 225);
+    background:rgb(255, 255, 255);
     padding:3.5em;
     width:500px;
     height: 100%;
     position:fixed;
     left:50%;
     margin-left:-250px;
+}
+
+#fondo{
+    width: 2000px;
+    height: 1000px;
+    background-color: rgb(194, 194, 194);
 }
 
 h2 {
