@@ -15,9 +15,11 @@ import { map, count } from 'rxjs/operators';
 export class CollectionListComponent implements OnInit {
   listCollections: Observable<any[]>;
   @Input()  status: string;
+  show:boolean;
 
   constructor(private route: ActivatedRoute, private collectionService:CollectionService,  private authFire: AngularFireAuth) { 
     this.listCollections = null;
+    this.show=false;
   }
 
   ngOnInit() {
@@ -34,7 +36,7 @@ export class CollectionListComponent implements OnInit {
   }
 
   removeCollection(collectionName: string, collectionKey: string){
-    if(confirm("¿Desea remover la colección '" + collectionName + "' y sus libros?"))
+    if(confirm("¿remover colección '" + collectionName + "'?"))
       this.collectionService.removeCollection(collectionKey);
   }
 
@@ -42,6 +44,11 @@ export class CollectionListComponent implements OnInit {
     if(event) {
       this.collectionService.newCollection(event);
     }
+  }
+
+  showCreate(){
+    this.show= !this.show;
+    console.log(this.show);
   }
 
 }

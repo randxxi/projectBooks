@@ -27,16 +27,15 @@ export class CollectionService {
     }
 
   newCollection(collection:Collection){
-
-
       const promise = this.favsRef.push(collection);
       promise.then(() => {
-        this.alertService.message("Collection creada", "success");
+        this.alertService.message("Colección creada", "success");
       });
     }
 
   getListCollections(): AngularFireList<any[]>{
     return this.favsRef;
+   
   }
 
   getBooksInCollection(key:string): AngularFireList<any[]>{

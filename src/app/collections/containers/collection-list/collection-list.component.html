@@ -1,6 +1,7 @@
 <div>
     <div class="collectionView">
-        <div class id="collection_addition">
+        <button class="btn btn-primary" (click)="showCreate()">Crear</button>
+        <div class id="collection_addition" *ngIf="show">
             <app-collection-form (submitted)="newCollection($event)"></app-collection-form>
         </div>
         <div class="list-group" id="collection_list">  
