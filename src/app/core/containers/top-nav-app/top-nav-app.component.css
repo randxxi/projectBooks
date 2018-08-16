@@ -57,9 +57,9 @@ header.top-header .right-header a.link-profile {
     background-color: var(--main-title-color);
     top: 42px;
     right: 125px;
-    border: 1px solid;
+    border: 1.5px solid;
     width: 300px;
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
 .user-window-info{
@@ -104,7 +104,7 @@ header.top-header .right-header a.link-profile {
 	background-color: rgb(164, 207, 247);
 	
 	height: 40%;
-	border-radius: 0% 0% 14% 14% ;
+	border-radius: 0% 0% 5% 5% ;
 
 
 
