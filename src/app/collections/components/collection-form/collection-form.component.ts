@@ -18,7 +18,13 @@ export class CollectionFormComponent implements OnInit {
   }
 
   submit() {
-    this.submitted.emit(this.collection);
+    if(this.collection.name.trim().length > 0){
+      this.submitted.emit(this.collection);
+    this.collection.name ="";
+    this.collection.description ="";
+    }
+    
+
   }
 
 }
